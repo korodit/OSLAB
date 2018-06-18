@@ -1,0 +1,42 @@
+Your identification has been saved in /root/.ssh/cgmon_rsa_id.
+Your public key has been saved in /root/.ssh/cgmon_rsa_id.pub.
+The key fingerprint is:
+43:14:72:70:f6:5e:eb:35:7a:05:a5:37:d4:c1:22:27 root@snf-700739
+The key's randomart image is:
++---[RSA 4096]----+
+|      o.*.    .o+|
+|       * . E o.+.|
+|        . . = +..|
+|       . . . . o.|
+|        S . . o .|
+|         . . o o |
+|            o .  |
+|             .   |
+|                 |
++-----------------+
+touch ~/.ssh/config
+set -i -e '/^IdentityFile ~/.ssh/cgmon_rsa_id$/d' ~/.ssh/config
+echo 'IdentityFile ~/.ssh/cgmon_rsa_id' >> ~/.ssh/config
+# Send the following public key to your course assistants
+echo -e '\n\n\n\n\n'; \
+echo '------------ cut here ------------'; \
+echo -n 'command="git-shell -c \"$SSH_ORIGINAL_COMMAND\"",'; \
+echo -n 'no-port-forwarding,no-agent-forwarding ssh-rsa '; \
+cat ~/.ssh/cgmon_rsa_id.pub; \
+echo '------------ cut here ------------'; \
+echo -e '\n\n\n\n\n'
+
+
+
+
+
+
+------------ cut here ------------
+command="git-shell -c \"$SSH_ORIGINAL_COMMAND\"",no-port-forwarding,no-agent-forwarding ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDpsDHwqXjc2skNP9MJX3QfpHJqNCZEeg0s+htf9+EPSk3LJC/f0FmApMD0AyX7AdBsgaASI9tVSjRcE1MI4V5vyO49R118iHrBY0rL/7HhIN4bO8NubPqddrB841gUgGMF7Ohdg2MJiwhJdEbIQr9Rw42RPwpdOJxW/DLFWhlGQvs+l8/bHaxX6lB1EYBK0Fy1wfTeRFIzTflFSop5E0roF8XmqlhiWVi5dWyi22cSrxlf7U1MnS7K3D680o1/J5apDegfDBYeXBr3vtFC4WymsvYtELDqI9Moh53LCEvZiqZy6VlFAAIuNzwTVUgabPLZ3TMHaBGMyOTeZFQ/wqnyKEkVbj3L5+kcoVPADjzzfH7/yUNv6oUDxeCPOzeQAiF+1pbmug/2A6kGrGvXlPhNW8aXFN4wtSYBe4gbkfdgIj55cd3EtYGea2UN0XRW3qvOXaNmrTBmdMGFAXpnhZJpQ/NhXh3DVwhGupZtq6mTeKmfx7lreefy2dIiXQlQamf2lbFq8wNlTrZ5vKOOVt5NhM1uwnBmjBqtOiTKmxXQ2MwzgDnv36lQfN5Khpaueh6VEmpQ4Ch7nSQPDBOLRUB+50mpglmyqP/YqBc8R9w3keXY0ugey/E00w5nZIq6vwm0NXktvFhyCq3yDRKlIwLIHmD15ZljDJ9eoQ/N0BN4KQ== root@snf-700739
+------------ cut here ------------
+
+
+
+
+
+
